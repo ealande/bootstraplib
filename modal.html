@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./lib/bootstrap.min.css">
+        <title>Modal</title>
+    </head>
+    <body>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalExample">
+            Open Modal
+        </button>
+        <div class="modal" id="modalExample" data-bs-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Modal Title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi cumque nulla quod, in placeat quaerat molestiae maiores delectus sed necessitatibus assumenda doloremque ipsum sit laborum sint esse tempora unde aliquam.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./lib/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                const modalExample = new bootstrap.Modal('#modalExample');
+                setTimeout(function() {
+                    modalExample.show()}, 3000);
+            })
+        </script>
+    </body>
+</html>

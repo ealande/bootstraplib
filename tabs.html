@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./lib/bootstrap.min.css">
+        <title>NavBar</title>
+        <style>
+            .navbar-nav .nav-link.active{
+                color: #fff;
+            }
+            .nav-link {
+                text-align: center;
+            }
+            section{
+                height: 100vh;
+                background-color: antiquewhite;
+            }
+
+            header {
+                position:sticky;
+                top:0;
+                left:0;
+                background-color: #fff;
+                padding-top: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="navbar navbar-expand-lg">
+                <div class="container">
+                    <h1>Page Title</h1>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                        <ul class="nav navbar-nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#begin">Begin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#products">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sales">Sales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div data-bs-spy="scroll" data-bs-target="#header">
+            <section id="begin">
+                <h2>Begin</h2>
+            </section>
+            <section id="products">
+                <h2>Products</h2>
+                <div class="container">
+                    <nav class="nav nav-pills">
+                        <button data-bs-toggle="tab" data-bs-target="#tab1" class="nav-link active" type="button">Electronics</button>
+                        <button data-bs-toggle="tab" data-bs-target="#tab2" class="nav-link" type="button">Men fashion</button>
+                        <button data-bs-toggle="tab" data-bs-target="#tab3" class="nav-link" type="button">Women Fashion</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        electronics content
+                    </div>
+                    <div class="tab-pane" id="tab2">
+                        men fashion content
+                    </div>
+                    <div class="tab-pane" id="tab3">
+                        women fashion content
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section id="sales">
+                <h2>Sales</h2>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+            </section>
+        </div>
+        <script src="/lib/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
